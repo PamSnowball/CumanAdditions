@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "xan:giantdummyrugs2" },
+        "facing=south": { "model": "xan:giantdummyrugs2", "y": 180 },
+        "facing=west":  { "model": "xan:giantdummyrugs2", "y": 270 },
+        "facing=east":  { "model": "xan:giantdummyrugs2", "y": 90 }
+    }
+}

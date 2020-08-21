@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "bottom": "xan:blocks/red_cumanbrick",
+        "top": "xan:blocks/red_cumanbrick",
+        "side": "xan:blocks/red_cumanbrick"
+    }
+}

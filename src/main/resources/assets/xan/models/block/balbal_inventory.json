@@ -1,0 +1,7 @@
+{
+    "parent": "xan:block/balbal_inventory_model",
+    "textures": {
+        "particle": "xan:blocks/balbal",
+        "4_0": "xan:blocks/balbal"
+    }
+}

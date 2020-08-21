@@ -1,0 +1,16 @@
+[
+{
+  "modid": "xan",
+  "name": "Cuman Additions",
+  "description": "Additions for the Millénaire custom culture, the Cumans",
+  "version": "1.0.0",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["FionaDanger, Snowball#3986"],
+  "credits": "Custom Models created in BlockBench and Moded on Eclipse",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

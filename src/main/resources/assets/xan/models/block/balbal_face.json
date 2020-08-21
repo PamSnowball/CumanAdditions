@@ -1,0 +1,8 @@
+{
+  "parent": "xan:block/balbal_face_model",
+  "textures": {
+    "all": "xan:blocks/balbal",
+    "particle": "xan:blocks/balbal",
+    "0": "xan:blocks/balbal"
+  }
+}

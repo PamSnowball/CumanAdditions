@@ -1,0 +1,3 @@
+{
+	"parent": "block/wall_inventory", "textures":  { "wall": "xan:blocks/red_cumanbrick", "particle": "xan:blocks/red_cumanbrick" }
+}

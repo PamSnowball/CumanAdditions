@@ -1,0 +1,6 @@
+{
+	"parent": "xan:block/cumanframe_inventory_model",
+	 "textures": {
+    "0": "xan:blocks/red_cumanbrick"
+  }
+}

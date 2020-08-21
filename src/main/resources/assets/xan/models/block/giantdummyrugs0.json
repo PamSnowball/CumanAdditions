@@ -1,0 +1,7 @@
+{
+    "parent": "block/carpet",
+    "textures": {
+        "particle": "xan:blocks/giantrugs0",
+        "wool": "xan:blocks/giantrugs0"
+    }
+}

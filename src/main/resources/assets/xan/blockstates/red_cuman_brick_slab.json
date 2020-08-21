@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "xan:half_slab_red_cuman_brick"
+    },
+    "half=top,variant=default": {
+      "model": "xan:upper_slab_red_cuman_brick"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "normal": { "model": "xan:timber_wall" },
+    "facing=north": { "model": "xan:timber_wall" },
+    "facing=east": { "model": "xan:timber_wall", "y": 90 },
+    "facing=south": { "model": "xan:timber_wall", "y": 180 },
+    "facing=west": { "model": "xan:timber_wall", "y": 270 },
+    "facing=up": { "model": "xan:timber_wall", "x": 270 },
+    "facing=down": { "model": "xan:timber_wall", "x": 90 }
+  }
+}

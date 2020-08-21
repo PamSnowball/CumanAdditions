@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "xan:bigrugs" },
+        "facing=south": { "model": "xan:bigrugs", "y": 180 },
+        "facing=west":  { "model": "xan:bigrugs", "y": 270 },
+        "facing=east":  { "model": "xan:bigrugs", "y": 90 }
+    }
+}
