@@ -52,6 +52,8 @@ public class BlockRugs extends XanObjects.ModElement {
 			setCreativeTab(CreativeTabs.DECORATIONS);
 		}
 		
+		//This giant If is a spot getter, so the rugs can choose a random placement.
+		
 		@Override
 		public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
 			super.onBlockAdded(world, pos, state);

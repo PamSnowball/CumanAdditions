@@ -141,6 +141,8 @@ public class BlockBalBal extends XanObjects.ModElement {
 			return false;
 		}
 
+		//The BalBals are made of two blocks, BalBal and BalBalFace, this If is for the placement, BalBal puts BalBalFace above itself.
+		
 		@Override
 		public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
 			super.onBlockAdded(world, pos, state);
@@ -179,6 +181,8 @@ public class BlockBalBal extends XanObjects.ModElement {
 				  }
 		}
 
+		//The BalBals are made of two blocks, BalBal and BalBalFace, this If is for the breaking, BalBal breaks BalBalFace when it is broke by a player and viceversa.
+		
 		@Override
 		public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
 			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest);

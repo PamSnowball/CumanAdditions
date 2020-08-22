@@ -17,6 +17,8 @@ import net.minecraft.block.Block;
 
 import com.snowball.xan.XanObjects;
 
+//This Cuman Frame is the one made of "Red Bricks"
+
 @XanObjects.ModElement.Tag
 public class BlockCumanFrame1 extends XanObjects.ModElement {
 	

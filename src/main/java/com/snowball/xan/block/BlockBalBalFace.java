@@ -142,7 +142,9 @@ public class BlockBalBalFace extends XanObjects.ModElement {
 		public int quantityDropped(Random random) {
 			return 0;
 		}
-
+		
+		//The BalBals are made of two blocks, BalBal and BalBalFace, this If is for the breaking, BalBal breaks BalBalFace when it is broke by a player and viceversa.
+		
 		@Override
 		public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
 			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest);

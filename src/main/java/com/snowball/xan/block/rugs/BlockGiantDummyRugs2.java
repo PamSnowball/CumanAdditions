@@ -32,6 +32,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+//Dummy Rugs are those who dont trigger. I mean, those who do not put other rugs in the surroundings.
+
 @XanObjects.ModElement.Tag
 public class BlockGiantDummyRugs2 extends XanObjects.ModElement {
 	

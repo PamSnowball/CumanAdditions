@@ -140,6 +140,8 @@ public class BlockBigRugs extends XanObjects.ModElement {
 		public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
 			drops.add(new ItemStack(BlockRugs.block, (int) (0)));
 		}
+	
+		//This giant If is a spot getter, so the rugs can choose a random placement.
 		
 		@Override
 		public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
@@ -201,7 +203,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos(x, y, (z - 1)),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 							break;
 						}
 					}
@@ -213,7 +215,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos((x + 1), y, (z - 1)),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 							break;
 						}
 					}
@@ -225,7 +227,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos((x + 1), y, z),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 							break;
 						}
 					}
@@ -249,7 +251,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos(x, y, (z + 1)),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 							break;
 						}
 					}
@@ -261,7 +263,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos((x + 1), y, (z + 1)),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 							break;
 						}
 					}
@@ -273,7 +275,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos((x + 1), y, z),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 							break;
 						}
 					}
@@ -297,7 +299,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos(x, y, (z + 1)),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 							break;
 						}
 					}
@@ -309,7 +311,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos((x - 1), y, (z + 1)),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 							break;
 						}
 					}
@@ -321,7 +323,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos((x - 1), y, z),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 							break;
 						}
 					}
@@ -345,7 +347,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos(x, y, (z - 1)),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 							break;
 						}
 					}
@@ -357,7 +359,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 							break;
 						}
 					}
@@ -369,7 +371,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
 							world.setBlockState(new BlockPos((x - 1), y, z),
-									_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+									_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 							break;
 						}
 					}
@@ -395,7 +397,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -407,7 +409,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -419,7 +421,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -446,7 +448,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -458,7 +460,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -470,7 +472,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -497,7 +499,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -509,7 +511,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -521,7 +523,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -545,7 +547,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -557,7 +559,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -569,7 +571,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -596,7 +598,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -608,7 +610,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -620,7 +622,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -644,7 +646,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -656,7 +658,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -668,7 +670,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -695,7 +697,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -707,7 +709,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -719,7 +721,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -743,7 +745,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -755,7 +757,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -767,7 +769,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -794,7 +796,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -806,7 +808,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -818,7 +820,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -842,7 +844,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -854,7 +856,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -866,7 +868,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -894,7 +896,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -906,7 +908,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -918,7 +920,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -943,7 +945,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -955,7 +957,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -967,7 +969,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -992,7 +994,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1004,7 +1006,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1016,7 +1018,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1043,7 +1045,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1055,7 +1057,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1067,7 +1069,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1092,7 +1094,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1104,7 +1106,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1116,7 +1118,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1141,7 +1143,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1153,7 +1155,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1165,7 +1167,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1192,7 +1194,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1204,7 +1206,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1216,7 +1218,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1241,7 +1243,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1253,7 +1255,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1265,7 +1267,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1290,7 +1292,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1302,7 +1304,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1314,7 +1316,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1341,7 +1343,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1353,7 +1355,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1365,7 +1367,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1390,7 +1392,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1402,7 +1404,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1414,7 +1416,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1439,7 +1441,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1451,7 +1453,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1463,7 +1465,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1490,7 +1492,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1502,7 +1504,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1514,7 +1516,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1539,7 +1541,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1551,7 +1553,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1563,7 +1565,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x - 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1588,7 +1590,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
 								break;
 							}
 						}
@@ -1600,7 +1602,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z + 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}
@@ -1612,7 +1614,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1637,7 +1639,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos(x, y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
 								break;
 							}
 						}
@@ -1649,7 +1651,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, (z - 1)),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH), 3);
 								break;
 							}
 						}
@@ -1661,7 +1663,7 @@ public class BlockBigRugs extends XanObjects.ModElement {
 						for (IProperty<?> prop : _bs.getProperties().keySet()) {
 							if (prop.getName().equals("facing")) {
 								world.setBlockState(new BlockPos((x + 1), y, z),
-										_bs.withProperty((PropertyDirection) prop, EnumFacing.EAST), 3);
+										_bs.withProperty((PropertyDirection) prop, EnumFacing.WEST), 3);
 								break;
 							}
 						}

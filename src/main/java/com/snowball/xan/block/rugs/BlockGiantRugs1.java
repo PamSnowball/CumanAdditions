@@ -142,6 +142,8 @@ public class BlockGiantRugs1 extends XanObjects.ModElement {
 			drops.add(new ItemStack(BlockRugs.block, (int) (0)));
 		}
 		
+		//This giant If is a spot getter, so the rugs can choose a random placement.
+		
 		@Override
 		public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
 			super.onBlockAdded(world, pos, state);
