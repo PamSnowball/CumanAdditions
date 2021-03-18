@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "xan:blocks/red_felt_frame"
+    }
+}
