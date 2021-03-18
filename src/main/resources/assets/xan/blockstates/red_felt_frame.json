@@ -1,0 +1,57 @@
+{
+    "variants": {
+        "face=base,facing=north,colour=red_blue": { "model": "red_felt_frame" },
+        "face=base,facing=south,colour=red_blue": { "model": "red_felt_frame", "y": 180 },
+        "face=base,facing=west,colour=red_blue": { "model": "red_felt_frame", "y": 270 },
+        "face=base,facing=east,colour=red_blue": { "model": "red_felt_frame", "y": 90 },
+        "face=base,facing=north,colour=red_zigzag": { "model": "red_felt_frame" },
+        "face=base,facing=south,colour=red_zigzag": { "model": "red_felt_frame", "y": 180 },
+        "face=base,facing=west,colour=red_zigzag": { "model": "red_felt_frame", "y": 270 },
+        "face=base,facing=east,colour=red_zigzag": { "model": "red_felt_frame", "y": 90 },
+    
+        "face=one,facing=north,colour=red_blue": { "model": "red_blue_felt_frame_one" },
+        "face=one,facing=south,colour=red_blue": { "model": "red_blue_felt_frame_one", "y": 180 },
+        "face=one,facing=west,colour=red_blue": { "model": "red_blue_felt_frame_one", "y": 270 },
+        "face=one,facing=east,colour=red_blue": { "model": "red_blue_felt_frame_one", "y": 90 },
+        "face=one,facing=north,colour=red_zigzag": { "model": "red_zigzag_felt_frame_one" },
+        "face=one,facing=south,colour=red_zigzag": { "model": "red_zigzag_felt_frame_one", "y": 180 },
+        "face=one,facing=west,colour=red_zigzag": { "model": "red_zigzag_felt_frame_one", "y": 270 },
+        "face=one,facing=east,colour=red_zigzag": { "model": "red_zigzag_felt_frame_one", "y": 90 },
+	
+        "face=two,facing=north,colour=red_blue": { "model": "red_blue_felt_frame_two" },
+        "face=two,facing=south,colour=red_blue": { "model": "red_blue_felt_frame_two", "y": 180 },
+        "face=two,facing=west,colour=red_blue": { "model": "red_blue_felt_frame_two", "y": 270 },
+        "face=two,facing=east,colour=red_blue": { "model": "red_blue_felt_frame_two", "y": 90 },
+        "face=two,facing=north,colour=red_zigzag": { "model": "red_zigzag_felt_frame_two" },
+        "face=two,facing=south,colour=red_zigzag": { "model": "red_zigzag_felt_frame_two", "y": 180 },
+        "face=two,facing=west,colour=red_zigzag": { "model": "red_zigzag_felt_frame_two", "y": 270 },
+        "face=two,facing=east,colour=red_zigzag": { "model": "red_zigzag_felt_frame_two", "y": 90 },
+	
+        "face=two_equals,facing=north,colour=red_blue": { "model": "red_blue_felt_frame_two_equals" },
+        "face=two_equals,facing=south,colour=red_blue": { "model": "red_blue_felt_frame_two_equals", "y": 180 },
+        "face=two_equals,facing=west,colour=red_blue": { "model": "red_blue_felt_frame_two_equals", "y": 270 },
+        "face=two_equals,facing=east,colour=red_blue": { "model": "red_blue_felt_frame_two_equals", "y": 90 },
+        "face=two_equals,facing=north,colour=red_zigzag": { "model": "red_zigzag_felt_frame_two_equals" },
+        "face=two_equals,facing=south,colour=red_zigzag": { "model": "red_zigzag_felt_frame_two_equals", "y": 180 },
+        "face=two_equals,facing=west,colour=red_zigzag": { "model": "red_zigzag_felt_frame_two_equals", "y": 270 },
+        "face=two_equals,facing=east,colour=red_zigzag": { "model": "red_zigzag_felt_frame_two_equals", "y": 90 },
+	
+        "face=three,facing=north,colour=red_blue": { "model": "red_blue_felt_frame_three" },
+        "face=three,facing=south,colour=red_blue": { "model": "red_blue_felt_frame_three", "y": 180 },
+        "face=three,facing=west,colour=red_blue": { "model": "red_blue_felt_frame_three", "y": 270 },
+        "face=three,facing=east,colour=red_blue": { "model": "red_blue_felt_frame_three", "y": 90 },
+        "face=three,facing=north,colour=red_zigzag": { "model": "red_zigzag_felt_frame_three" },
+        "face=three,facing=south,colour=red_zigzag": { "model": "red_zigzag_felt_frame_three", "y": 180 },
+        "face=three,facing=west,colour=red_zigzag": { "model": "red_zigzag_felt_frame_three", "y": 270 },
+        "face=three,facing=east,colour=red_zigzag": { "model": "red_zigzag_felt_frame_three", "y": 90 },
+	
+        "face=full,facing=north,colour=red_blue": { "model": "red_blue_felt_frame_full" },
+        "face=full,facing=south,colour=red_blue": { "model": "red_blue_felt_frame_full", "y": 180 },
+        "face=full,facing=west,colour=red_blue": { "model": "red_blue_felt_frame_full", "y": 270 },
+        "face=full,facing=east,colour=red_blue": { "model": "red_blue_felt_frame_full", "y": 90 },
+        "face=full,facing=north,colour=red_zigzag": { "model": "red_zigzag_felt_frame_full" },
+        "face=full,facing=south,colour=red_zigzag": { "model": "red_zigzag_felt_frame_full", "y": 180 },
+        "face=full,facing=west,colour=red_zigzag": { "model": "red_zigzag_felt_frame_full", "y": 270 },
+        "face=full,facing=east,colour=red_zigzag": { "model": "red_zigzag_felt_frame_full", "y": 90 }
+	}
+}

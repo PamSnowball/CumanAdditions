@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "xan:blocks/white_felt_frame",
+        "front": "xan:blocks/white_blue_felt_frame",
+        "side": "xan:blocks/white_felt_frame"
+    }
+}

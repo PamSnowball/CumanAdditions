@@ -8,6 +8,7 @@ buildscript {
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'eclipse'
 
 version = "1.0"
 group = "com.snowball.xan"
